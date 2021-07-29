@@ -6,6 +6,8 @@ class Db {
         this.db = new sqlite3.Database(file);
         this.createTable()
     }
+
+    // CREATES TABLE IF NOT ALREADY EXISTS
     createTable() {
         const sql = `
             CREATE TABLE IF NOT EXISTS userAuth (
@@ -15,6 +17,8 @@ class Db {
                 password text)`
         return this.db.run(sql);
     }
+
+    // SEARCHES USER BY EMAIL
     selectByEmail(email, callback) {
         return this.db.get(
             `SELECT * FROM userAuth WHERE email = ?`,
@@ -22,6 +26,8 @@ class Db {
                 callback(err, row)
             })
     }
+
+    // INSERTS USER INTO DB TABLE
     insert(user, callback) {
         return this.db.run(
             'INSERT INTO userAuth (name,email,password) VALUES (?,?,?)',
@@ -30,4 +36,5 @@ class Db {
             })
     }
 }
+
 module.exports = Db

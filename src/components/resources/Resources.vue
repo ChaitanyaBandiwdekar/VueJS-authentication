@@ -1,6 +1,6 @@
 <template>
     <div class="item">
-    <h1>Protected resource page </h1>
+        <h1>Protected resource page </h1>
     </div>
 </template>
 

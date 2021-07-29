@@ -2,14 +2,17 @@
   <div id="app">
     <v-app-bar dark class="navbar">
       
+      <!-- HOME -->
       <router-link to="/">
         <v-btn elevation="2" dark>Home</v-btn>
       </router-link>
       
+      <!-- ABOUT -->
       <router-link to="/about">
         <v-btn elevation="2">About</v-btn>
       </router-link>
 
+      <!-- IF AUTHENTICATED SHOW THESE -->
       <span v-if="isLoggedIn"> 
         <router-link to="/resources">
           <v-btn elevation="2">Resources</v-btn>
@@ -20,6 +23,7 @@
         </v-btn>
       </span>
 
+      <!-- ELSE THESE -->
       <span v-else> 
         <router-link to="/login">
           <v-btn elevation="2">Login</v-btn>

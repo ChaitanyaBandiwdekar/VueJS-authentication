@@ -5,7 +5,6 @@
 </template>
 
 <style scoped>
-
 h1 {
     margin: 1rem;
 }

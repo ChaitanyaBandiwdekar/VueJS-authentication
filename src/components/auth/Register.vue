@@ -2,10 +2,12 @@
 <v-container>
     <div class="header"><h1>Register</h1></div>
 
+    <!-- Register form -->
     <v-form v-model="valid" class="register" @submit.prevent="register">
         <v-container style="padding: 1rem">
             <v-col>
 
+                <!-- Name -->
                 <v-row cols="6" md="4" style="margin: 0.5rem">
                     <v-text-field
                     id="name"
@@ -16,6 +18,7 @@
                     ></v-text-field>
                 </v-row>
 
+                <!-- Email -->
                 <v-row cols="6" md="4" style="margin: 0.5rem">
                     <v-text-field
                     id="email"
@@ -26,6 +29,7 @@
                     ></v-text-field>
                 </v-row>
 
+                <!-- Password -->
                 <v-row cols="6" md="4" style="margin: 0.5rem">
                     <v-text-field
                     id="password"
@@ -41,6 +45,7 @@
                     ></v-text-field>
                 </v-row>
 
+                <!-- Password confirmation -->
                 <v-row cols="6" md="4" style="margin: 0.5rem">
                     <v-text-field
                     id="password"
@@ -56,6 +61,7 @@
                     ></v-text-field>
                 </v-row>
 
+                <!-- Register button -->
                 <v-row style="margin: 0.5rem">
                     <v-btn class="ma-2" outlined color="teal" type="submit">
                     Register
@@ -66,29 +72,6 @@
     </v-form>
     
 </v-container>
-
-<!-- <h4>Register</h4>
-    <form @submit.prevent="register">
-    <label for="name">Name</label>
-    <div>
-        <input id="name" type="text" v-model="name" required autofocus>
-    </div>
-    <label for="email" >E-Mail Address</label>
-    <div>
-        <input id="email" type="email" v-model="email" required>
-    </div>
-    <label for="password">Password</label>
-    <div>
-        <input id="password" type="password" v-model="password" required>
-    </div>
-    <label for="password-confirm">Confirm Password</label>
-    <div>
-        <input id="password-confirm" type="password" v-model="password_confirmation" required>
-    </div>
-    <div>
-        <button type="submit">Register</button>
-    </div>
-    </form> -->
 
 </template>
 
