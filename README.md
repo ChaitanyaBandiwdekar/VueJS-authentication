@@ -1,24 +1,20 @@
-# authentication-system-vue
+# Authentication system in Vue JS
+
+1. Boilerplate for login and register
+2. Token authentication using JWT (JSON Web Tokens)
+3. Uses Vuex for state management and Vuetify for UI
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Runs the client
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Runs the server
 ```
-npm run build
+node server/app
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
