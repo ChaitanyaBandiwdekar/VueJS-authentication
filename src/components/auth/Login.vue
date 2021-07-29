@@ -36,54 +36,47 @@ methods: {
 
 
 <template>
-  <v-form v-model="valid" class="login" @submit.prevent="login">
-    <v-container style="padding: 1rem">
-      <v-col>
-        <v-row
-          cols="6"
-          md="4"
-          style="margin: 0.5rem"
-        >
-          <v-text-field
-            v-model="email"
-            :rules="emailRules"
-            label="E-mail"
-            required
-          ></v-text-field>
-        </v-row>
+  <v-container class="main">
 
-        <v-row
-          cols="6"
-          md="4"
-          style="margin: 0.5rem"
-        >
-          <v-text-field
-            v-model="password"
-            :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
-            :rules="[rules.required, rules.min]"
-            :type="show ? 'text' : 'password'"
-            name="input-10-1"
-            label="Password"
-            hint="At least 6 characters"
-            counter
-            @click:append="show = !show"
-          ></v-text-field>
-        </v-row>
-
-        <v-row style="margin: 0.5rem">
-            <v-btn
-            class="ma-2"
-            outlined
-            color="teal"
-            type="submit"
-            >
-            Login
-            </v-btn>
-        </v-row>
-      </v-col>
-    </v-container>
+    <div class="header"><h1>Login</h1></div>
     
-  </v-form>
+    <v-form v-model="valid" class="login" @submit.prevent="login">
+      <v-container style="padding: 1rem">
+        <v-col>
+          
+          <v-row cols="6" md="4" style="margin: 0.5rem">
+            <v-text-field
+              v-model="email"
+              :rules="emailRules"
+              label="E-mail"
+              required
+            ></v-text-field>
+          </v-row>
+
+          <v-row cols="6" md="4" style="margin: 0.5rem">
+            <v-text-field
+              v-model="password"
+              :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+              :rules="[rules.required, rules.min]"
+              :type="show ? 'text' : 'password'"
+              name="input-10-1"
+              label="Password"
+              hint="At least 6 characters"
+              counter
+              @click:append="show = !show"
+            ></v-text-field>
+          </v-row>
+
+          <v-row style="margin: 0.5rem">
+              <v-btn class="ma-2" outlined color="teal" type="submit">
+              Login
+              </v-btn>
+          </v-row>
+
+        </v-col>
+      </v-container>
+    </v-form>
+  </v-container>
 </template>
 
 <script>

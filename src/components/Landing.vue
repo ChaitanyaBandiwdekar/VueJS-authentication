@@ -1,14 +1,12 @@
 <template>
-  <div class="main">
-      <div class="item">
-        <h1>User authentication in Vue using Vuex</h1>
-      </div>
-  </div>
+    <div class="item">
+      <h1>User authentication in Vue using Vuex</h1>
+    </div>
 </template>
 
 <style scoped>
 
-.item {
+h1 {
     margin: 1rem;
 }
 </style>
